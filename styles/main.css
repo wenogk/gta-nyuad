@@ -1,14 +1,14 @@
 body{
     margin: 0em;
     padding: 0em;
-    background-image: url("https://i.ytimg.com/vi/9_YJnor4XH4/maxresdefault.jpg");
+    background-image: url("https://raw.githubusercontent.com/wenogk/gta-nyuad/master/assets/images/load.jpg");
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  
-  
-  
+
+
+
   #play {
     display: block;
     position: absolute;
@@ -20,46 +20,46 @@ body{
    -webkit-transition:0.5s;
     transition:0.5s;
     color:pink;
-    cursor:pointer;    
-    
+    cursor:pointer;
+
   }
-  
+
   #play:hover {
     background:green;
   -webkit-transform:rotate(-1deg);
     transform:rotate(-2deg);
-    
-    
+
+
   }
-  
+
   #about:hover {
-    background:green;     
+    background:green;
     -webkit-transform:rotate(-2deg);
     transform:rotate(-2deg);
-    
-    
+
+
   }
-  
+
   #credits:hover {
     background:green;
     -webkit-transform:rotate(-2deg);
     transform:rotate(-2deg);
-    
+
   }
-  
+
   #glitches:hover {
-    background:green;   
+    background:green;
     -webkit-transform:rotate(-2deg);
     transform:rotate(-2deg);
-    
+
   }
- 
+
   #play p {
     position:relative;
-    
-    
+
+
   }
-  
+
   #about {
     display: block;
     position: absolute;
@@ -72,15 +72,15 @@ body{
     transition:0.5s;
     color:pink;
     cursor:pointer;
-     
-    
+
+
   }
   #about p {
     position:relative;
   }
-  
+
   #glitches {
-    
+
     display: block;
     position: absolute;
     border-radius: 25px;
@@ -92,14 +92,14 @@ body{
     transition:0.5s;
     color:pink;
     cursor:pointer;
-    
+
   }
-  
+
   #glitches p {
     position:relative;
-    
+
   }
-  
+
   #credits {
     display: block;
     position: relative;
@@ -114,11 +114,11 @@ body{
     color:pink;
     cursor:pointer;
   }
-  
+
   #credits p {
     position:relative;
     top:0px;
-    
+
   }
 
   .align-items-center {
