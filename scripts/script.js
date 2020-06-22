@@ -1,3 +1,41 @@
+
+//function taken from https://greensock.com/forums/topic/22304-animation-backdrop-filter-blur/
+(function() {
+    const blurProperty = gsap.utils.checkPrefix("filter"),
+            blurExp = /blur\((.+)?px\)/,
+            getBlurMatch = target => (gsap.getProperty(target, blurProperty) || "").match(blurExp) || [];
+
+    gsap.registerPlugin({
+        name: "blur",
+        get(target) {
+            return +(getBlurMatch(target)[1]) || 0;
+        },
+        init(target, endValue) {
+            let data = this,
+          filter = gsap.getProperty(target, blurProperty),
+          endBlur = "blur(" + endValue + "px)",
+          match = getBlurMatch(target)[0],
+          index;
+      if (filter === "none") {
+        filter = "";
+      }
+      if (match) {
+        index = filter.indexOf(match);
+        endValue = filter.substr(0, index) + endBlur + filter.substr(index + match.length);
+      } else {
+        endValue = filter + endBlur;
+        filter += filter ? " blur(0px)" : "blur(0px)";
+      }
+      data.target = target;
+      data.interp = gsap.utils.interpolate(filter, endValue);
+        },
+        render(progress, data) {
+            data.target.style[blurProperty] = data.interp(progress);
+        }
+    });
+})();
+
+
 var elem = document.documentElement;
 function openFullscreen() {
   if (elem.requestFullscreen) {
@@ -24,19 +62,37 @@ function closeFullscreen() {
 }
 
 function playedVideo() {
-  gsap.to(".video-overlay", { //#727272
-   duration:1,
-   background: "rgb(144,238,144,0)",
-   ease: "sine.out",
- });
+  gsap.timeline()
+  .to(".video-overlay", { //#727272
+   duration:0.5,
+   filter: "sepia(0)",
+   ease: "none",
+   backdropFilter: "blur(0px)"
+ },"same")
+ .to(".pauseMenuContainer", { //#727272
+  duration:0.5,
+  opacity: 0,
+  display: "none",
+  ease: "sine.out",
+},"same");
+ console.log("PLAYED")
 }
 
 function pausedVideo() {
-  gsap.to(".video-overlay", { //#727272
-   duration:1,
-   background: "rgb(144,238,144,0.4)",
-   ease: "sine.out",
- });
+  gsap.timeline()
+  .to(".video-overlay", { //#727272
+   duration:0.5,
+   filter: "sepia(0.5)",
+   ease: "none",
+   backdropFilter: "blur(10px)"
+ },"same")
+ .to(".pauseMenuContainer", { //#727272
+  duration:0.5,
+  opacity: 1,
+  display: "block",
+  ease: "sine.out",
+},"same");
+ console.log("PAUSED")
 }
 
 $('#videoPlayer').click(function () {
