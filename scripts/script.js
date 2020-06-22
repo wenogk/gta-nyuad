@@ -35,6 +35,8 @@
     });
 })();
 
+let fullscreenDebug = false;
+let pauseMenuMusic = document.getElementById("pause-menu-music");
 
 var elem = document.documentElement;
 function openFullscreen() {
@@ -61,7 +63,21 @@ function closeFullscreen() {
   }
 }
 
+function fadeOutPauseMenuMusic() {
+  var audio = $("#pause-menu-music");
+  audio.animate({volume:0});
+  pauseMenuMusic.pause();
+}
+
+function fadeInPlayMenuMusic() {
+  var audio = $("#pause-menu-music");
+  audio.animate({volume:100});
+  pauseMenuMusic.play();
+}
+
 function playedVideo() {
+  if(fullscreenDebug) {openFullscreen();}
+  fadeOutPauseMenuMusic();
   gsap.timeline()
   .to(".video-overlay", { //#727272
    duration:0.5,
@@ -79,6 +95,10 @@ function playedVideo() {
 }
 
 function pausedVideo() {
+  if(fullscreenDebug) {openFullscreen();}
+
+  fadeInPlayMenuMusic();
+  //openFullscreen()
   gsap.timeline()
   .to(".video-overlay", { //#727272
    duration:0.5,
@@ -94,15 +114,24 @@ function pausedVideo() {
 },"same");
  console.log("PAUSED")
 }
-
+function togglePlay() {
+  var mediaVideo = $("#videoPlayer").get(0);
+  if (mediaVideo.paused) {
+      mediaVideo.play();
+      playedVideo();
+  } else {
+      mediaVideo.pause();
+      pausedVideo();
+ }
+}
 $('#videoPlayer').click(function () {
-  openFullscreen()
-   var mediaVideo = $("#videoPlayer").get(0);
-   if (mediaVideo.paused) {
-       mediaVideo.play();
-       playedVideo();
-   } else {
-       mediaVideo.pause();
-       pausedVideo();
-  }
+   togglePlay()
+});
+
+$('.resume-button').click(function(){
+  togglePlay()
+});
+
+$('.quit-button').click(function(){
+  alert("quit")
 });
