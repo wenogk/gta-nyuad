@@ -122,8 +122,8 @@ nav > .nav.nav-tabs{
 }
 
 .pauseMenuMapImage {
- -webkit-filter: drop-shadow(0 0 25px #222);
- filter: drop-shadow(0 0 25px #222);
+ -webkit-filter: drop-shadow(0 0 50px #222);
+ filter: drop-shadow(0 0 50px #222);
 }
 
 .resume-button:hover {
