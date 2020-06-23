@@ -103,7 +103,6 @@ nav > .nav.nav-tabs{
   color: white;
   padding: 6px;
   font-family: pauseMenuFont;
-  background: rgb(0,0,0,0.7);
 }
 
 .mapHolder {
@@ -132,4 +131,14 @@ nav > .nav.nav-tabs{
 
 .quit-button:hover {
   cursor:pointer;
+}
+
+.transparentContent {
+  background: rgb(0,0,0,0.7);
+}
+
+.box{
+  box-model: border-box;
+  border: 2px solid transparent;
+  background-clip:padding-box;
 }
