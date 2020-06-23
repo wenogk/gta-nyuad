@@ -1,4 +1,4 @@
-let fullscreenDebug = true;
+let fullscreenDebug = false;
 let pauseMenuMusic = document.getElementById("pause-menu-music");
 let missionContent = []
 let cheatHolder = []
@@ -145,7 +145,7 @@ video.addEventListener('timeupdate', (event) => {
           `);
 
         $(".missionRestart").html(`
-          <button onclick="setVideoTime(${mission["timeStart"]})">Restart from checkpoint</button>
+          <a onclick="setVideoTime(${mission["timeStart"]})" class="nav-item nav-link transparentContent" style="padding:3px;">Restart from checkpoint</a>
           `);
           //
       }
@@ -194,8 +194,13 @@ document.onkeypress = function(e) {
       pauseVideo();
       closeFullscreen();
       document.location.href = "https://wenogk.github.io/gta-nyuad/glitches.html";
-
+    } else if(cheatHolder.join("")=="fullscreen") {
+      fullscreenDebug=true;
+      openFullscreen();
+      playVideo()
     }
+
+    //fullscreenDebug
 
 };
 
