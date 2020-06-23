@@ -1,5 +1,17 @@
 console.log("loaded");
 
+document.addEventListener('visibilitychange', function() {
+    if(document.hidden) {
+        // tab is now inactive
+        clearInterval();
+    }
+    else {
+        // tab is active again
+        // restart timers
+location.reload();
+    }
+});
+
 // Add all names here
 var names = [
 "Saad Teeti",
