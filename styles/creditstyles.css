@@ -31,7 +31,9 @@ body{
 	/* vertical-align: baseline; */
 	overflow:hidden;
 }
-
+body{
+  cursor: url('Unavailable.cur'), auto;
+}
 body {
 	line-height: 1;
 }
@@ -109,6 +111,7 @@ a:hover{
 	color:#bf5909;
 	text-decoration: none;
 	-webkit-text-stroke: 1px black;
+  cursor: url('cursor.cur'), auto;
 }
 .logo{
 	width: 20%;
