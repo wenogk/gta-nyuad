@@ -46,13 +46,14 @@ li{
   text-align:center;
   -webkit-transition:0.5s;
   transition:0.5s;
-  color:pink;
+  color:#bf5909;
   cursor: url('cursor.cur'), auto;
 
 }
 
 #play:hover {
-  background:green;
+  background:#8900e1;
+  /* background:#ffc107; */
 -webkit-transform:rotate(-1deg);
   transform:rotate(-2deg);
 
@@ -60,7 +61,7 @@ li{
 }
 
 #about:hover {
-  background:green;
+  background:#8900e1;
   -webkit-transform:rotate(-2deg);
   transform:rotate(-2deg);
 
@@ -68,14 +69,14 @@ li{
 }
 
 #credits:hover {
-  background:green;
+  background:#8900e1;
   -webkit-transform:rotate(-2deg);
   transform:rotate(-2deg);
 
 }
 
 #glitches:hover {
-  background:green;
+  background:#8900e1;
   -webkit-transform:rotate(-2deg);
   transform:rotate(-2deg);
 
@@ -96,7 +97,7 @@ li{
   text-align:center;
   -webkit-transition:0.5s;
   transition:0.5s;
-  color:pink;
+  color:#bf5909;
   cursor: url('cursor.cur'), auto;
 
 }
@@ -114,7 +115,7 @@ li{
   text-align:center;
   -webkit-transition:0.5s;
   transition:0.5s;
-  color:pink;
+  color:#bf5909;
   cursor: url('cursor.cur'), auto;
 }
 
@@ -133,7 +134,7 @@ li{
   text-align:center;
   -webkit-transition:0.5s;
   transition:0.5s;
-  color:pink;
+  color:#bf5909;
   cursor: url('cursor.cur'), auto;}
 
 #credits p {
