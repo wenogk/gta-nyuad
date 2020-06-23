@@ -66,13 +66,20 @@ function closeFullscreen() {
 function fadeOutPauseMenuMusic() {
   var audio = $("#pause-menu-music");
   audio.animate({volume:0});
+  setTimeout(function() {
   pauseMenuMusic.pause();
+}, 1000);
+
 }
 
 function fadeInPlayMenuMusic() {
   var audio = $("#pause-menu-music");
-  audio.animate({volume:100});
   pauseMenuMusic.play();
+  setTimeout(function() {
+  audio.animate({volume:1});
+}, 200);
+
+
 }
 
 function playedVideo() {
@@ -132,6 +139,6 @@ $('.resume-button').click(function(){
   togglePlay()
 });
 
-$('.quit-button').click(function(){
-  alert("quit")
-});
+setTimeout(function(){
+     document.getElementById('videoPlayer').play();
+ },1000);
