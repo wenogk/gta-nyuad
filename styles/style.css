@@ -97,6 +97,7 @@ nav > .nav.nav-tabs{
 .nav-link:hover {
   color: white;
   background: rgb(0,0,0,0.5);
+  cursor: url('cursor.cur'), auto;
 }
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
     color: black;
@@ -152,4 +153,8 @@ nav > .nav.nav-tabs{
   box-model: border-box;
   border: 2px solid transparent;
   background-clip:padding-box;
+}
+
+.missionContent {
+  padding: 6px;
 }

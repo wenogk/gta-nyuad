@@ -6,18 +6,17 @@
   }
 
 body{
-    margin: 0em;
-    padding: 0em;
-    background-color: black;
-    /* background-image: url("https://raw.githubusercontent.com/wenogk/gta-nyuad/master/assets/images/load.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center; */
-    cursor: url('Unavailable.cur'), auto;
-  }
+  margin: 0em;
+  padding: 0em;
+  background-color: black;
+  cursor: url('Unavailable.cur'), auto;
+}
 
-ul{
-  margin-top: 5%;
+.srs{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 p{
   font-family:'PricedownBl-Regular';
@@ -34,39 +33,37 @@ p{
 }
 li{
   height: 5vw;
-  width: 1.5vw;
+  padding: 0 1em;
+  
+}
+a{
+  width: 15vw;
 }
 
 #play {
   display: block;
-  position: absolute;
   border-radius: 10px;
-  width:25%;
   margin: auto;
   text-align:center;
   -webkit-transition:0.5s;
   transition:0.5s;
   color:#bf5909;
   cursor: url('cursor.cur'), auto;
-
 }
 
 #play:hover {
   background:#8900e1;
   /* background:#ffc107; */
--webkit-transform:rotate(-1deg);
+  -webkit-transform:rotate(-1deg);
   transform:rotate(-2deg);
-
-
 }
 
-#about:hover {
+#credits:hover {
   background:#8900e1;
   -webkit-transform:rotate(-2deg);
   transform:rotate(-2deg);
-
-
 }
+
 a{
   color: inherit;
   -webkit-text-stroke: 2px black;
@@ -75,13 +72,6 @@ a:hover{
   color: inherit;
   text-decoration: none;
   cursor: url('cursor.cur'), auto;
-}
-
-#credits:hover {
-  background:#8900e1;
-  -webkit-transform:rotate(-2deg);
-  transform:rotate(-2deg);
-
 }
 
 #glitches:hover {
@@ -93,34 +83,22 @@ a:hover{
 
 #play p {
   position:relative;
-
-
 }
 
-#about {
+#credits {
   display: block;
-  position: absolute;
   border-radius: 10px;
   margin-top: 6%;
-  width:15%;
   text-align:center;
   -webkit-transition:0.5s;
   transition:0.5s;
   color:#bf5909;
   cursor: url('cursor.cur'), auto;
-
-}
-#about p {
-  position:relative;
 }
 
 #glitches {
-
   display: block;
-  position: relative;
   border-radius: 10px;
-  margin-top: 26%;
-  width:17%;
   text-align:center;
   -webkit-transition:0.5s;
   transition:0.5s;
@@ -130,72 +108,23 @@ a:hover{
 
 #glitches p {
   position:relative;
-
 }
-
-#credits {
-  display: block;
-  position: relative;
-  border-radius: 25px;
-  margin-top: 38%;
-
-  width:16%;
-  text-align:center;
-  -webkit-transition:0.5s;
-  transition:0.5s;
-  color:#bf5909;
-  cursor: url('cursor.cur'), auto;}
 
 #credits p {
   position:relative;
-  top:0px;
-
 }
 
-.align-items-center {
-  -ms-flex-align: center!important;
-  align-items: center!important;
-  display: flex;
-  justify-content: center;
-}
-@media only screen and (max-width: 1020px){
-  ul{
-    margin-top: 15%;
-  }
-}
-@media only screen and (max-width: 840px){
-  ul{
-    margin-top: 25%;
-  }
-}
-@media only screen and (max-width: 700px){
-  ul{
-    margin-top: 35%;
-  }
-}
 @media only screen and (max-width: 600px){
-  ul{
-    margin-top: 45%;
-  }
   p, a{
-    font-size: 4vw;
     -webkit-text-stroke: 1px black;
   }
 }
 
-@media only screen and (max-width: 510px){
-  ul{
-    margin-top: 55%;
+@media only screen and (max-height: 320px){
+  p, a{
+    font-size: 12vh;
   }
-}
-
-@media only screen and (max-width: 420px){
-  ul{
-    margin-top: 70%;
-  }
-}
-@media only screen and (max-width: 375px){
-  ul{
-    margin-top: 80%;
+  li{
+    height: 15vh;
   }
 }
