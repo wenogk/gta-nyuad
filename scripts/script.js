@@ -1,4 +1,4 @@
-let fullscreenDebug = false;
+let fullscreenDebug = true;
 let pauseMenuMusic = document.getElementById("pause-menu-music");
 let missionContent = []
 let cheatHolder = []
@@ -157,5 +157,6 @@ document.onkeypress = function(e) {
 };
 
 setTimeout(function(){
+      if(fullscreenDebug) {openFullscreen();}
      document.getElementById('videoPlayer').play();
  },1000);
