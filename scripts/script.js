@@ -3,6 +3,17 @@ let pauseMenuMusic = document.getElementById("pause-menu-music");
 let missionContent = []
 let cheatHolder = []
 let lastCheatTypeTime = Math.floor(Date.now() / 1000);
+console.log(`    .---------------.
+   /       oLo       \
+ O/_____/________/____\O     IT IS MY SOLEMN DUTY TO CONFIRM THAT
+ /__________+__________\     GRAND THEFT AUTO IV IS NOWHERE NEAR
+/    (#############)    \    AS FUN AS GRAND THEFT AUTO: SAN ANDREAS
+|[**](#############)[**]|
+\_______________________/
+ |_""__|_,-----,_|__""_|
+ | |     '-----'     | |
+ '-'          APC'97 '-'
+`)
 var elem = document.documentElement;
 function openFullscreen() {
   if (elem.requestFullscreen) {
@@ -54,7 +65,6 @@ function playedVideo() {
   display: "none",
   ease: "sine.out",
 },"same");
- console.log("PLAYED")
 }
 
 function pausedVideo() {
@@ -75,7 +85,6 @@ function pausedVideo() {
   display: "block",
   ease: "sine.out",
 },"same");
- console.log("PAUSED")
 }
 
 function togglePlay() {
@@ -117,28 +126,42 @@ video.addEventListener('timeupdate', (event) => {
   for(x in missionContent) {
     let mission = missionContent[x]
     if((video.currentTime>=mission["timeStart"]) && (video.currentTime<mission["timeEnd"])) {
-      console.log("found!")
       $(".missionContent").html(mission["content"]);
       let missionDuration = mission["timeEnd"] - mission["timeStart"];
       let missionElapsed = mission["timeEnd"] - video.currentTime;
       let percentageProgress = Math.floor((((missionDuration) - (missionElapsed))/missionDuration) * 100);
-      console.log("percentageProgress: " + percentageProgress)
       if(!mission["isProgressBar"]) {
-        $(".missionProgress").html(``)
+        $(".missionProgress").html('');
+        $(".missionRestart").html('');
       } else {
         $(".missionProgress").html(`
-          <div class="progress" style="height: 50px; width:100%; margin-bottom:5px;">
+          <div class="progress" style="background: rgb(0,0,0,0.7); height: 50px; width:100%; margin-bottom:5px;">
           <div class="progress-bar bg-success" role="progressbar" style="width: ${percentageProgress}%" aria-valuenow="${percentageProgress}" aria-valuemin="0" aria-valuemax="100">${percentageProgress}% mission complete</div>
           </div>
-          `)
+          `);
+
+        $(".missionRestart").html(`
+          <button onclick="setVideoTime(${mission["timeStart"]})">Restart from checkpoint</button>
+          `);
+          //
       }
 
     }
   }
 });
-
+function setVideoTime(time) {
+  video.currentTime = time;
+  togglePlay();
+}
 document.onkeypress = function(e) {
     e = e || window.event;
+    if(e.keyCode == 32){
+      togglePlay();
+    }
+    if(event.keyCode === 27) {
+      togglePlay();
+    }
+
     var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
     let letter = String.fromCharCode(charCode).toLowerCase();
     if (charCode) {
@@ -168,6 +191,6 @@ document.onkeypress = function(e) {
 };
 
 setTimeout(function(){
-      if(fullscreenDebug) {openFullscreen();}
+    if(fullscreenDebug) {openFullscreen();}
      togglePlay()
  },1000);
