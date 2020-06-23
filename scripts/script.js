@@ -104,6 +104,11 @@ $('#videoPlayer').click(function () {
 $('.resume-button').click(function(){
   togglePlay()
 });
+
+$('.nav-link').click(function() {
+  let audio = document.getElementById("pause-menu-press-button");
+  audio.play();
+});
 let video = document.getElementById("videoPlayer");
 
 video.addEventListener('timeupdate', (event) => {
