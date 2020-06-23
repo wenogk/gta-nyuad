@@ -194,10 +194,12 @@ document.onkeypress = function(e) {
       pauseVideo();
       closeFullscreen();
       document.location.href = "https://wenogk.github.io/gta-nyuad/glitches.html";
+      cheatHolder = []
     } else if(cheatHolder.join("")=="fullscreen") {
       fullscreenDebug=true;
       openFullscreen();
       playVideo()
+      cheatHolder = []
     }
 
     //fullscreenDebug
@@ -206,7 +208,7 @@ document.onkeypress = function(e) {
 
 setTimeout(function(){
     if(fullscreenDebug) {openFullscreen();}
-     togglePlay()
+     playVideo()
  },1000);
 
  video.onended = function() {
