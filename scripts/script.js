@@ -1,6 +1,8 @@
 let fullscreenDebug = false;
 let pauseMenuMusic = document.getElementById("pause-menu-music");
 let missionContent = []
+let cheatHolder = []
+let lastCheatTypeTime = Math.floor(Date.now() / 1000);
 var elem = document.documentElement;
 function openFullscreen() {
   if (elem.requestFullscreen) {
@@ -124,6 +126,32 @@ video.addEventListener('timeupdate', (event) => {
   }
 });
 
+document.onkeypress = function(e) {
+    e = e || window.event;
+    var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
+    let letter = String.fromCharCode(charCode);
+    if (charCode) {
+        let timeNow = Math.floor(Date.now() / 1000);
+        if(((timeNow-lastCheatTypeTime)>2) && cheatHolder.length != 0) {
+          cheatHolder = []
+          cheatHolder.push(letter);
+          lastCheatTypeTime =timeNow;
+        } else {
+            cheatHolder.push(letter);
+            lastCheatTypeTime =timeNow;
+        }
+    }
+    console.log(cheatHolder.join(""))
+    let cheatCode = "givemegta";
+    if(cheatHolder.join("")=="givemegta") {
+      video.currentTime = 180;
+      cheatHolder = []
+    } else if(cheatHolder.join("")=="bike") {
+      video.currentTime = (60*5) + 4; //5:04
+      cheatHolder = []
+    }
+
+};
 
 setTimeout(function(){
      document.getElementById('videoPlayer').play();
