@@ -3,17 +3,11 @@ let pauseMenuMusic = document.getElementById("pause-menu-music");
 let missionContent = []
 let cheatHolder = []
 let lastCheatTypeTime = Math.floor(Date.now() / 1000);
-console.log(`    .---------------.
-   /       oLo       \
- O/_____/________/____\O     IT IS MY SOLEMN DUTY TO CONFIRM THAT
- /__________+__________\     GRAND THEFT AUTO IV IS NOWHERE NEAR
-/    (#############)    \    AS FUN AS GRAND THEFT AUTO: SAN ANDREAS
-|[**](#############)[**]|
-\_______________________/
- |_""__|_,-----,_|__""_|
- | |     '-----'     | |
- '-'          APC'97 '-'
-`)
+console.log(`░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███`)
+console.log("Welcome Explorer! We at GTA NYU Abu Dhabi would like to give you a gift.")
+console.log("Anytime in the gameplay you can type any of the cheatcodes to unlock checkpoints!")
+console.log("The precious cheatcodes are: givemegta, bike, skip, glitch");
+console.log(`░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███`)
 var elem = document.documentElement;
 function openFullscreen() {
   if (elem.requestFullscreen) {
@@ -186,6 +180,8 @@ document.onkeypress = function(e) {
     } else if(cheatHolder.join("")=="skip") {
       video.currentTime = video.currentTime + 20; //5:04
       cheatHolder = []
+    } else if(cheatHolder.join("")=="glitch") {
+      window.open("https://wenogk.github.io/gta-nyuad/glitches.html");
     }
 
 };
