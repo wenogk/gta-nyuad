@@ -1,6 +1,6 @@
 addMissionContent(`
-  Confidential <br />
-  In this part of the video everything is till confidenatioal, keep going through the video to find out what happened with you earlier that day. Make sure to pay attention to all of the flashbacks to what happened earlier today, so whoever made you upset will pay back.
+  MISSION IS LOCKED
+  <img src= "assets/images/conf.png" class="img-fluid"/>
   `,0,162, false);
 addMissionContent(`
   Select your clothes <br />
