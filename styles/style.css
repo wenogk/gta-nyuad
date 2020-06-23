@@ -73,10 +73,9 @@ body{
   left:10%;
   background: rgb(0,0,0,0);
   overflow-y: auto;
-  top: 50px;
+  top: 5px;
 }
-
-@media only screen and (max-width: 600px) {
+@media (min-width: 801px) {
   .pauseMenuContainer {
     display: none;
     opacity:0;
@@ -87,7 +86,7 @@ body{
     left:10%;
     background: rgb(0,0,0,0);
     overflow-y: auto;
-    top: 4px;
+    top: 50px;
   }
 }
 
