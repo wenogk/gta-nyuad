@@ -92,6 +92,16 @@ function togglePlay() {
  }
 }
 
+function pauseVideo() {
+  mediaVideo.pause();
+  pausedVideo();
+}
+
+function playVideo() {
+  mediaVideo.pause();
+  pausedVideo();
+}
+
 function addMissionContent(content,timeStart,timeEnd,isProgressBar=true) {
   missionContent.push({
     content: content,
@@ -181,6 +191,7 @@ document.onkeypress = function(e) {
       video.currentTime = video.currentTime + 20; //5:04
       cheatHolder = []
     } else if(cheatHolder.join("")=="glitch") {
+      pauseVideo();
       window.open("https://wenogk.github.io/gta-nyuad/glitches.html");
     }
 
