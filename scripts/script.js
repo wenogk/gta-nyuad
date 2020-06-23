@@ -12,7 +12,7 @@ function openFullscreen() {
   } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
     elem.webkitRequestFullscreen();
   } else if (elem.msRequestFullscreen) { /* IE/Edge */
-    elem.msRequestFullscreen();
+    elem.msRequestFullscreen(); //s
   }
 }
 
