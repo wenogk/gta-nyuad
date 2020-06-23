@@ -89,11 +89,12 @@ function togglePlay() {
  }
 }
 
-function addMissionContent(content,timeStart,timeEnd) {
+function addMissionContent(content,timeStart,timeEnd,isProgressBar=true) {
   missionContent.push({
     content: content,
     timeStart: timeStart,
-    timeEnd: timeEnd
+    timeEnd: timeEnd,
+    isProgressBar: isProgressBar
   });
 }
 
@@ -122,11 +123,16 @@ video.addEventListener('timeupdate', (event) => {
       let missionElapsed = mission["timeEnd"] - video.currentTime;
       let percentageProgress = Math.floor((((missionDuration) - (missionElapsed))/missionDuration) * 100);
       console.log("percentageProgress: " + percentageProgress)
-      $(".missionProgress").html(`
-        <div class="progress" style="height: 50px; width:100%; margin-bottom:5px;">
-        <div class="progress-bar" role="progressbar" style="width: ${percentageProgress}%" aria-valuenow="${percentageProgress}" aria-valuemin="0" aria-valuemax="100">${percentageProgress}% mission complete</div>
-        </div>
-        `)
+      if(!mission["isProgressBar"]) {
+        $(".missionProgress").html(``)
+      } else {
+        $(".missionProgress").html(`
+          <div class="progress" style="height: 50px; width:100%; margin-bottom:5px;">
+          <div class="progress-bar" role="progressbar" style="width: ${percentageProgress}%" aria-valuenow="${percentageProgress}" aria-valuemin="0" aria-valuemax="100">${percentageProgress}% mission complete</div>
+          </div>
+          `)
+      }
+
     }
   }
 });
@@ -148,7 +154,7 @@ document.onkeypress = function(e) {
     }
     console.log(cheatHolder.join(""))
     let cheatCode = "givemegta";
-    if(cheatHolder.join("")=="givemegta") {
+    if(cheatHolder.join("") == "givemegta") {
       video.currentTime = 180;
       cheatHolder = []
     } else if(cheatHolder.join("")=="bike") {
