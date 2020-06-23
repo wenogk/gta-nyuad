@@ -1,13 +1,27 @@
 addMissionContent(`
   Confidential <br />
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  `,0,10);
+  Flashback to what happened earlier today.
+  `,0,162), false;
 addMissionContent(`
-  test <br />
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  `,10,15);
+  Select your clothes <br />
+  Choose your outfit so you can start.
+  `,163,233,false);
 addMissionContent(`
-  TEST 2 <br />
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Get Money&Sanatizer <br />
+    Remeber how Romeno refused to give you money, it's revenge time. Go get money from him and Sanatizer!
+    `,244,285, true);
+addMissionContent(`
+  Acquire a Bike <br />
+  Saad was very rude to you when you asked him for his bike. It's to time for Saad to loses his bike.
 
-  `,15,20);
+  `,286,342, true);
+  addMissionContent(`
+    Steal Monister Energy Drink <br />
+    You have been broke for the past week, spending your money on alchohol and ciggerates. Convenience Store refused to give you monister energy drink so its time to steal it.
+
+    `,343,401, true);
+    addMissionContent(`
+      Failed Mission <br />
+      The dean texted you and you are suspended!
+
+      `,401,492,false);
