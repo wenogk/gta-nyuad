@@ -129,7 +129,7 @@ video.addEventListener('timeupdate', (event) => {
 document.onkeypress = function(e) {
     e = e || window.event;
     var charCode = (typeof e.which == "number") ? e.which : e.keyCode;
-    let letter = String.fromCharCode(charCode);
+    let letter = String.fromCharCode(charCode).toLowerCase();
     if (charCode) {
         let timeNow = Math.floor(Date.now() / 1000);
         if(((timeNow-lastCheatTypeTime)>2) && cheatHolder.length != 0) {
@@ -148,6 +148,9 @@ document.onkeypress = function(e) {
       cheatHolder = []
     } else if(cheatHolder.join("")=="bike") {
       video.currentTime = (60*5) + 4; //5:04
+      cheatHolder = []
+    } else if(cheatHolder.join("")=="skip") {
+      video.currentTime = video.currentTime + 20; //5:04
       cheatHolder = []
     }
 
