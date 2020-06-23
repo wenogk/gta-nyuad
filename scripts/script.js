@@ -30,21 +30,12 @@ function closeFullscreen() {
 
 function fadeOutPauseMenuMusic() {
   var audio = $("#pause-menu-music");
-  audio.animate({volume:0});
-  setTimeout(function() {
   pauseMenuMusic.pause();
-}, 1000);
-
 }
 
 function fadeInPlayMenuMusic() {
   var audio = $("#pause-menu-music");
   pauseMenuMusic.play();
-  setTimeout(function() {
-  audio.animate({volume:0.5});
-}, 200);
-
-
 }
 
 function playedVideo() {
@@ -158,5 +149,5 @@ document.onkeypress = function(e) {
 
 setTimeout(function(){
       if(fullscreenDebug) {openFullscreen();}
-     document.getElementById('videoPlayer').play();
+     togglePlay()
  },1000);
