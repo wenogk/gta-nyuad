@@ -154,3 +154,7 @@ nav > .nav.nav-tabs{
   border: 2px solid transparent;
   background-clip:padding-box;
 }
+
+.missionContent {
+  padding: 6px;
+}
