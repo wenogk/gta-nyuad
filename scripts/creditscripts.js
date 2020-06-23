@@ -1,3 +1,4 @@
+/* taken in part from: https://www.jqueryscript.net/text/Create-A-Rolling-End-Credits-Effect-In-jQuery-Roll-Credits.html*/
 console.log("loaded");
 
 document.addEventListener('visibilitychange', function() {
@@ -23,6 +24,10 @@ var names = [
 "Saad Teeti",
 "Romeno Wenogk",
 "Youssef Abdelhamid",
+"Matti Jouett",
+"Pierre Depaz",
+"Public Safety Staff",
+"Convenience Store Staff ",
 ];
 
 // Add corresponding title here
@@ -36,6 +41,11 @@ var titles = [
   "Storyboard",
   "Script Supervisor",
   "Costume Designer",
+  "Recording Device Provider",
+  "Special Thanks",
+  "              ",
+  "              ",
+
 ]
 
 function writeName(){
