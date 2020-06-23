@@ -3,6 +3,17 @@
   src: url('../assets/fonts/ChaletLondonNineteenSixty.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
+@media only screen and (orientation:portrait){
+        #wrapper { display:none; }
+        #warning-message { display:block; }
+    }
+    @media only screen and (orientation:landscape){
+        #warning-message { display:none; }
+    }
+#warning-message {
+  margin-top: 50px;
+  font-family: pauseMenuFont;
+}
 .video-overlay {
   pointer-events: none;
   z-index: 3;
