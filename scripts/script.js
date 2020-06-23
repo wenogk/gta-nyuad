@@ -192,7 +192,9 @@ document.onkeypress = function(e) {
       cheatHolder = []
     } else if(cheatHolder.join("")=="glitch") {
       pauseVideo();
-      window.open("https://wenogk.github.io/gta-nyuad/glitches.html");
+      closeFullscreen();
+      document.location.href = "https://wenogk.github.io/gta-nyuad/glitches.html";
+
     }
 
 };
@@ -201,3 +203,8 @@ setTimeout(function(){
     if(fullscreenDebug) {openFullscreen();}
      togglePlay()
  },1000);
+
+ video.onended = function() {
+      closeFullscreen();
+      document.location.href = "https://wenogk.github.io/gta-nyuad/credits.html";
+};
