@@ -97,3 +97,14 @@ writeName();
 fadeInText();
 scrollText();
 })
+
+$(document).ready(function(){
+
+    var iframe = $('#screen iframe');
+    var player = new Vimeo.Player(iframe);
+
+    player.on('ended', function() {
+        document.location.href = "https://wenogk.github.io/gta-nyuad/glitches.html";
+    });
+
+});
