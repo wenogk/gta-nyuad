@@ -110,4 +110,4 @@ scrollText();
 // });
 window.setTimeout(function() {
     window.location.href = 'index.html';
-}, 72000);
+}, 70000);
