@@ -17,6 +17,9 @@
 
 body{
   cursor: url('Unavailable.cur'), auto;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
 }
 .video-overlay {
   pointer-events: none;
