@@ -21,31 +21,14 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+	/* vertical-align: baseline; */
+	overflow:hidden;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+
 
 body {
 font-family: 'Open Sans', sans-serif;
@@ -53,14 +36,13 @@ font-family: 'Open Sans', sans-serif;
 
 #screen {
   background-color: black;
-  position: absolute;;
+  position: absolute;
   top: 0;
   left:0;
   height: 100%;
   width: 100%;
   margin: 0;
   text-align: center;
-
   position: absolute;
 }
 
@@ -77,10 +59,28 @@ font-family: 'Open Sans', sans-serif;
 .title {
   font-size: 1em;
   color: white;
-  opacity: 0;
 }
 .name {
   font-size: 2em;
   color: white;
-  opacity: 0;
+}
+.vimeo-wrapper {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   pointer-events: none;
+   overflow: hidden;
+}
+.vimeo-wrapper iframe {
+   width: 100vw;
+   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 /
+   min-height: 100vh;
+   min-width: 177.77vh; / Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
 }
