@@ -1,4 +1,4 @@
-let fullscreenDebug = true;
+let fullscreenDebug = false;
 let pauseMenuMusic = document.getElementById("pause-menu-music");
 let missionContent = []
 let cheatHolder = []
