@@ -100,11 +100,20 @@ scrollText();
 
 $(document).ready(function(){
 
-    var iframe = $('#screen iframe');
+    var iframe = $('#iframeVideo');
     var player = new Vimeo.Player(iframe);
 
-    player.on('ended', function() {
+    player.on('finish', function() {
+    //  alert("ended")
         document.location.href = "https://wenogk.github.io/gta-nyuad/glitches.html";
+    });
+
+    player.on('play', function() {
+      console.log('Played the video');
+    });
+
+    player.getVideoTitle().then(function(title) {
+      console.log('title:', title);
     });
 
 });
