@@ -128,7 +128,7 @@ video.addEventListener('timeupdate', (event) => {
       } else {
         $(".missionProgress").html(`
           <div class="progress" style="height: 50px; width:100%; margin-bottom:5px;">
-          <div class="progress-bar" role="progressbar" style="width: ${percentageProgress}%" aria-valuenow="${percentageProgress}" aria-valuemin="0" aria-valuemax="100">${percentageProgress}% mission complete</div>
+          <div class="progress-bar bg-success" role="progressbar" style="width: ${percentageProgress}%" aria-valuenow="${percentageProgress}" aria-valuemin="0" aria-valuemax="100">${percentageProgress}% mission complete</div>
           </div>
           `)
       }
