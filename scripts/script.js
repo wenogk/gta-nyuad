@@ -37,7 +37,7 @@
 
 let fullscreenDebug = false;
 let pauseMenuMusic = document.getElementById("pause-menu-music");
-
+let missionContent = []
 var elem = document.documentElement;
 function openFullscreen() {
   if (elem.requestFullscreen) {
@@ -76,7 +76,7 @@ function fadeInPlayMenuMusic() {
   var audio = $("#pause-menu-music");
   pauseMenuMusic.play();
   setTimeout(function() {
-  audio.animate({volume:1});
+  audio.animate({volume:0.5});
 }, 200);
 
 
@@ -121,6 +121,7 @@ function pausedVideo() {
 },"same");
  console.log("PAUSED")
 }
+
 function togglePlay() {
   var mediaVideo = $("#videoPlayer").get(0);
   if (mediaVideo.paused) {
@@ -131,6 +132,15 @@ function togglePlay() {
       pausedVideo();
  }
 }
+
+function addMissionContent(content,timeStart,timeEnd) {
+  missionContent.push({
+    content: content,
+    timeStart: timeStart,
+    timeEnd: timeEnd
+  });
+}
+
 $('#videoPlayer').click(function () {
    togglePlay()
 });
@@ -138,6 +148,19 @@ $('#videoPlayer').click(function () {
 $('.resume-button').click(function(){
   togglePlay()
 });
+let video = document.getElementById("videoPlayer");
+
+video.addEventListener('timeupdate', (event) => {
+
+  for(x in missionContent) {
+    let mission = missionContent[x]
+    if((video.currentTime>=mission["timeStart"]) && (video.currentTime<mission["timeEnd"])) {
+      console.log("found!")
+      $(".missionContent").html(mission["content"]);
+    }
+  }
+});
+
 
 setTimeout(function(){
      document.getElementById('videoPlayer').play();
