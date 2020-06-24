@@ -15,11 +15,16 @@
      <title> GTA NYUAD </title>
      <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAD9/f0AAAAAAAkJCQD///8AAgICAAsLCwD8/PwACAgIAP7+/gABAQEAAwMDAPT09AAAAAAAAAAAAAAAAAAAAAAAERERmZmRkRERERMzMzgRERERGDMzMxEREREVIiMzERERERcIiDOhERERGDMzMxERERETMwYzERERERMzGDMREREREzMYMxERERETMxgzERERERMzGDMREREREzOYMxERERETMzMzEREREZgzMzMRERERQbMzMJEREREXkRERERHwBwAA8AcAAPAHAADwBwAA8AcAAPAHAADwBwAA8AcAAPAHAADwBwAA8AcAAPAHAADwBwAA8AcAAPAHAAD4BwAA" rel="icon" type="image/x-icon" />
    </head>
-   <body>
+   <body style="background-color: black;">
      <div id="wrapper">
       <div class="video-overlay"></div>
      <div class="video-container">
-     <video autoplay="autoplay" id="videoPlayer">
+     <video autoplay="autoplay" id="videoPlayer" style="position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  max-width: 100%;
+  max-height: 100%;">
    <source src="https://wenogk2.imfast.io/final.mp4" type="video/mp4">
  </video>
  </div>
