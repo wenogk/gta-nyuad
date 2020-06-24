@@ -46,6 +46,7 @@ body{
   transform: translate(-50%, -50%);
   z-index: 1;
 }
+
 @media screen and (max-aspect-ratio: 1920/1080) {
   .video-container > video {
     height: 100%;

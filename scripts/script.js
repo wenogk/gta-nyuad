@@ -1,4 +1,4 @@
-let fullscreenDebug = false;
+let fullscreenDebug = true;
 let pauseMenuMusic = document.getElementById("pause-menu-music");
 let missionContent = []
 let cheatHolder = []
@@ -93,13 +93,15 @@ function togglePlay() {
 }
 
 function pauseVideo() {
+  var mediaVideo = $("#videoPlayer").get(0);
   mediaVideo.pause();
   pausedVideo();
 }
 
 function playVideo() {
-  mediaVideo.pause();
-  pausedVideo();
+  var mediaVideo = $("#videoPlayer").get(0);
+  mediaVideo.play();
+  playedVideo();
 }
 
 function addMissionContent(content,timeStart,timeEnd,isProgressBar=true) {
@@ -215,3 +217,7 @@ setTimeout(function(){
       closeFullscreen();
       document.location.href = "https://wenogk.github.io/gta-nyuad/credits.html";
 };
+
+$(window).resize(function(){
+  pauseVideo()
+});
