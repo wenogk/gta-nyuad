@@ -1,39 +1,39 @@
-@font-face {
+@font-face { /* including the exact pause menu font which is used in GTA V  */
   font-family: 'pauseMenuFont';
   src: url('../assets/fonts/ChaletLondonNineteenSixty.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
 
-@media only screen and (orientation:portrait){
+@media only screen and (orientation:portrait){ /* media query to force user to turn to portrait to play video  */
         #wrapper { display:none; }
         #warning-message { display:block; }
     }
-    @media only screen and (orientation:landscape){
+    @media only screen and (orientation:landscape){ /* media query to force user to turn to portrait to play video  */
         #warning-message { display:none; }
     }
-#warning-message {
+#warning-message { /* styling for the msg to turn phone to landscape orientation */
   margin-top: 50px;
   font-family: pauseMenuFont;
 }
 
-body{
-  /*cursor: url('Unavailable.cur'), auto;*/
+body{ /* body styling for no scroll bars */
+
   max-width: 100vw;
   max-height: 100vh;
   overflow: hidden;
 }
 
-.mfCursor {
+.mfCursor { /* middle finger cursor class to be used as a toggle */
   cursor: url('cursor.cur'), auto;
 }
-.punchCursor {
+.punchCursor { /* punch cursor class to be used as a toggle */
   cursor: url('Unavailable.cur'), auto;
 }
-.noCursor {
+.noCursor { /* no cursor class to be used as a toggle */
   cursor: none;
 }
 
-.video-overlay {
+.video-overlay { /* video overlay class for the animated blur effect when pausing */
   pointer-events: none;
   z-index: 3;
   position: fixed;
@@ -42,7 +42,7 @@ body{
   width: 100vw;
   height: 100vh;
 }
-.video-container {
+.video-container { /* video container class */
   position: absolute;
   top: 0;
   left: 0;
@@ -50,7 +50,7 @@ body{
   height: 100vh;
   z-index: 1;
 }
-.video-container > video {
+.video-container > video { /* video element styling */
   display: block;
   position: absolute;
   left: 50%;
@@ -59,12 +59,12 @@ body{
   z-index: 1;
 }
 
-@media screen and (max-aspect-ratio: 1920/1080) {
+@media screen and (max-aspect-ratio: 1920/1080) { /* fix aspect ratio based on screen size */
   .video-container > video {
     height: 100%;
   }
 }
-@media screen and (min-aspect-ratio: 1920/1080) {
+@media screen and (min-aspect-ratio: 1920/1080) {  /* fix aspect ratio based on screen size */
   .video-container > video {
     width: 100%;
   }
@@ -79,7 +79,7 @@ body{
 }
 
 
-.pauseMenuContainer {
+.pauseMenuContainer {  /* styling for class that contains the entire pause menu */
   pointer-events: none;
   display: none;
   opacity:0;
@@ -92,13 +92,13 @@ body{
   overflow-y: auto;
   top: 5px;
 }
-@media (max-width: 768px) {
+@media (max-width: 768px) {  /* media query to allow for scrolling in mobile */
     body {
       max-height: auto;
       overflow: auto;
     }
   }
-@media (min-width: 801px) {
+@media (min-width: 801px) {  /* changing top margin for pause menu large devices  */
 
   .pauseMenuContainer {
     display: none;
@@ -114,7 +114,7 @@ body{
   }
 }
 
-nav > .nav.nav-tabs{
+nav > .nav.nav-tabs{  /* fully transparent tabs */
     border: none;
     color:#fff;
     background: rgb(0,0,0,0);
@@ -122,13 +122,13 @@ nav > .nav.nav-tabs{
     padding:0;
 }
 
-.nav-tabs > .nav-link {
+.nav-tabs > .nav-link { /* nav links partially transparent, GTA V style */
     background: rgb(0,0,0,0.7);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
 
-.nav-link {
+.nav-link { /* buttons with GTA V menu font */
   padding:2px;
   color: white;
   margin-top:5px;
@@ -137,34 +137,34 @@ nav > .nav.nav-tabs{
   font-family: pauseMenuFont;
 }
 
-.nav-link:hover {
+.nav-link:hover { /* hover style for buttons with GTA V menu font */
   color: white;
   background: rgb(0,0,0,0.5);
   cursor: url('cursor.cur'), auto;
 }
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active { /* top border green for active button just like GTA V menu */
     color: black;
     background: rgb(255,255,255,0.7);
     box-shadow: 0 -5px 0 0 #ACECAA;
     border: none;
 }
 
-.tab-content {
+.tab-content { /* margin for each tab content when selected */
   margin-top: 10px;
 }
 
-.tab-pane {
+.tab-pane { /* styling each tab content */
 
   color: white;
   padding: 6px;
   font-family: pauseMenuFont;
 }
 
-.mapHolder {
+.mapHolder { /* container for the map in pause menu vvery light bg like GTA V pause menu map*/
   background: rgb(0,0,0,0.05) !important;
 }
 
-.pauseMenuTitle {
+.pauseMenuTitle { /* pause menu title saying GTA NYU Abu Dhabi styling */
   font-size: 25px;
   font-weight: 900;
   font-family: pauseMenuFont;
@@ -175,31 +175,31 @@ nav > .nav.nav-tabs{
   padding: 0;
 }
 
-.pauseMenuMapImage {
+.pauseMenuMapImage { /* styling for pause menu map */
  -webkit-filter: drop-shadow(0 0 50px #222);
  filter: drop-shadow(0 0 50px #222);
 }
 
-.resume-button:hover {
+.resume-button:hover { /* resume button hover - not used */
   cursor:pointer;
 }
 
 
-.transparentContent {
+.transparentContent { /* class to make transparent bg GTA V style */
   background: rgb(0,0,0,0.7);
 }
 
-.box{
+.box{ /* little style hack to get transparent border */
   box-model: border-box;
   border: 2px solid transparent;
   background-clip:padding-box;
 }
 
-.missionContent {
+.missionContent { /* dynamic mission content styling */
   padding: 6px;
 }
 
-.clickAllow {
+.clickAllow {  /* class to be used to allow pointer events and be in front of the screen */
   pointer-events: auto;
   z-index: 100;
 }
