@@ -1,5 +1,5 @@
- /* taken in part from: https://www.jqueryscript.net/text/Create-A-Rolling-End-Credits-Effect-In-jQuery-Roll-Credits.html*/
-
+ /* taken in part from: https://www.jqueryscript.net/text/Create-A-Rolling-End-Credits-Effect-In-jQuery-Roll-Credits.html for the credits part*/
+/* style for both credit page and glitches */
 @font-face {
   font-family: 'PricedownBl-Regular';
   font-style: normal;
@@ -54,6 +54,7 @@ font-family: 'Open Sans', sans-serif;
   text-align: center;
   position: absolute;
 }
+/* classes for the credits */
 
 .employee {
   margin-top: 500px;
@@ -73,6 +74,7 @@ font-family: 'Open Sans', sans-serif;
   font-size: 2em;
   color: white;
 }
+/* claases for the bacground video on credits and for iframe specificly */
 .vimeo-wrapper {
    position: fixed;
    top: 0;
@@ -93,7 +95,7 @@ font-family: 'Open Sans', sans-serif;
    left: 50%;
    transform: translate(-50%, -50%);
 }
-
+/* classes for the button */
 ul{
   margin-top: 5%;
 }
@@ -139,7 +141,7 @@ a:hover{
   -webkit-transform:rotate(-2deg);
   transform:rotate(-2deg);
 }
-
+/* video */
 .glitchholder {
    position: fixed;
    top: 0;
