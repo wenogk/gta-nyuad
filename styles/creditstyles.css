@@ -59,7 +59,7 @@ font-family: 'Open Sans', sans-serif;
   margin-top: 500px;
   list-style-type: none;
   position: absolute;
-  bottom: 0;
+  bottom: -10%;
 	line-height: 1.5em;
   text-align: center;
   width: 100%;
