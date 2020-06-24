@@ -8,7 +8,7 @@ let lastCheatTypeTime = Math.floor(Date.now() / 1000); //required to reset cheat
 console.log(`░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███`) //message to users in console giving them the cheat codes
 console.log("Welcome Explorer! We at GTA NYU Abu Dhabi would like to give you a gift.")
 console.log("Anytime in the gameplay you can type any of the cheatcodes to unlock checkpoints!")
-console.log("The precious cheatcodes are: givemegta, bike, skip, glitch");
+console.log("The precious cheatcodes are: givemegta, bike, monster, backagain, skip, glitch");
 console.log(`░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███`)
 
 
@@ -208,7 +208,13 @@ document.onkeypress = function(e) { //key press event listener for cheat codes +
       openFullscreen();
       playVideo()
       cheatHolder = []
-    }
+    } else if(cheatHolder.join("")=="monster") {
+      video.currentTime = 343; //5:04
+      cheatHolder = []
+    } else if(cheatHolder.join("")=="backagain") {
+      video.currentTime = 0; //5:04
+      cheatHolder = []
+    } //343
 
     //fullscreenDebug
 
