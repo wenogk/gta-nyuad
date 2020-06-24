@@ -1,3 +1,7 @@
+/*
+The following code is used to fill up the missionContent array in script.js for the creation of a dynamic object so that the missionContent can be updated seamlessly.
+It is in a separate file mainly for the separtion of concerns and cleanliness
+*/
 addMissionContent(`
   Information not available yet!
   <img src= "assets/images/conf.png" class="img-fluid"/>
