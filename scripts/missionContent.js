@@ -5,7 +5,7 @@ addMissionContent(`
 addMissionContent(`
   Select your clothes <br />
   This is the start of the game. Your outfit is not fit for a criminal, so it's time for you to change it. Go over your options and pick your outfit to begin your crime life.
-  `,163,233,false);
+  `,163,235,false);
 addMissionContent(`
     Get Money&Sanatizer <br />
     Remember how Romeno refused to give you money and hand sanitizer? It's time for your revenge. Get $$$ and sanatizer, and maybe beat him up along the way so he learns his lesson.
