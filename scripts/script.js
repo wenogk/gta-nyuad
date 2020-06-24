@@ -62,7 +62,7 @@ function playedVideo() {
 }
 
 function pausedVideo() {
-  if(fullscreenDebug) {openFullscreen();}
+  //if(fullscreenDebug) {openFullscreen();}
 
   fadeInPlayMenuMusic();
   //openFullscreen()
@@ -92,7 +92,7 @@ function togglePlay() {
  }
 }
 
-function pauseVideo() {
+function pauseVideo(force = false) {
   var mediaVideo = $("#videoPlayer").get(0);
   mediaVideo.pause();
   pausedVideo();
@@ -219,6 +219,6 @@ setTimeout(function(){
 };
 $(window).resize(function(){
   if(!document.fullscreen) {
-    pauseVideo()
+    pauseVideo(true)
   }
 });
