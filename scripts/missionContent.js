@@ -1,5 +1,5 @@
 addMissionContent(`
-  MISSION IS LOCKED
+  Information not available yet!
   <img src= "assets/images/conf.png" class="img-fluid"/>
   `,0,162, false);
 addMissionContent(`
@@ -9,10 +9,10 @@ addMissionContent(`
 addMissionContent(`
     Get Money&Sanatizer <br />
     Remember how Romeno refused to give you money and hand sanitizer? It's time for your revenge. Get $$$ and sanatizer, and maybe beat him up along the way so he learns his lesson.
-    `,244,285, true);
+    `,236,285, true);
 addMissionContent(`
   Acquire a Bike <br />
-   When you wanted to borrow a bike and you were feeling down, Saad was very rude to you and told you to get lost. 
+   When you wanted to borrow a bike and you were feeling down, Saad was very rude to you and told you to get lost.
   It's time for Saad to lose his bike.
 
   `,286,342, true);
