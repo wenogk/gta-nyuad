@@ -16,9 +16,11 @@
      <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAD9/f0AAAAAAAkJCQD///8AAgICAAsLCwD8/PwACAgIAP7+/gABAQEAAwMDAPT09AAAAAAAAAAAAAAAAAAAAAAAERERmZmRkRERERMzMzgRERERGDMzMxEREREVIiMzERERERcIiDOhERERGDMzMxERERETMwYzERERERMzGDMREREREzMYMxERERETMxgzERERERMzGDMREREREzOYMxERERETMzMzEREREZgzMzMRERERQbMzMJEREREXkRERERHwBwAA8AcAAPAHAADwBwAA8AcAAPAHAADwBwAA8AcAAPAHAADwBwAA8AcAAPAHAADwBwAA8AcAAPAHAAD4BwAA" rel="icon" type="image/x-icon" />
    </head>
    <body style="background-color: black;">
+      <!-- The wrapper div will be shown to all landscaped orientation devices  -->
      <div id="wrapper">
-      <div class="video-overlay"></div>
+      <div class="video-overlay"></div> <!-- Overlay for blur animations on pause event  -->
      <div class="video-container">
+       <!-- Video Player with styling -->
      <video autoplay="autoplay" id="videoPlayer" style="position: absolute;
   top: 50%;
   left: 50%;
@@ -29,14 +31,14 @@
  </video>
  </div>
 
-
+<!-- Container for the pause menu  -->
  <div class="pauseMenuContainer">
    <div class="container">
-     <div class="clickAllow" >
+     <div class="clickAllow" > <!-- the pauseMenuContainer is click through so the actual pause menu needs this wrapper to make the exact size of the pause menu clickable  -->
      <div class="pauseMenuTitle">Grand Theft Auto NYUAD</div>
                  <div class="row">
                    <div class="col-xs-12 ">
-                     <nav>
+                     <nav> <!-- The pause menu tabs  -->
                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
                          <a class="nav-item nav-link active" id="nav-main-tab" data-toggle="tab" href="#nav-main" role="tab" aria-controls="nav-main" aria-selected="true">MISSION</a>
                          <a class="nav-item nav-link" id="nav-map-tab" data-toggle="tab" href="#nav-map" role="tab" aria-controls="nav-map" aria-selected="false">MAP</a>
@@ -46,22 +48,26 @@
                      </nav>
                      <div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
 
-
+                       <!-- pause menu content for MISSION tab  -->
                        <div class="tab-pane fade show active" id="nav-main" role="tabpanel" aria-labelledby="nav-main-tab">
                          <div class="container" >
+                            <!-- mission progress div that is dynamically loaded as the video goes  -->
                            <div class="row missionProgress box">
                           </div>
                          <div class="row box" >
+                           <!-- mission content div that is dynamically loaded as the video goes  -->
                           <div class="missionContent transparentContent">
                           </div>
                         </div>
                         <div class="row box" >
+                          <!-- mission restart button div that is dynamically loaded as the video goes  -->
                          <div class="missionRestart">
 
                          </div>
                        </div>
                       </div>
                      </div>
+                     <!-- div for MAP tab in pause menu and static content inside it  -->
                        <div class="tab-pane fade mapHolder transparentContent" id="nav-map" role="tabpanel" aria-labelledby="nav-map-tab">
                          <img src="assets/images/map.png" class="pauseMenuMapImage img-fluid" />
                         </div>
@@ -98,6 +104,7 @@
            </div>
          </div>
  </div>
+ <!-- Loading up the pause menu music and the tab click sounds  -->
  <audio  id="pause-menu-music">
    <source src="assets/sounds/pause-menu-music.mp3" type="audio/mpeg">
    Your browser does not support the audio element.
@@ -109,10 +116,13 @@
  </audio>
 
 </div>
+<!-- div for what is shown to mobile devices that are in portrait orientation  -->
 <div id="warning-message" class="text-center" style="color:white;">
     Rotate to landscape mode to play!
     <img src="assets/images/rotatedevice.gif" class="img-fluid" />
 </div>
+
+<!-- loading up the scripts  -->
    <script
   src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
