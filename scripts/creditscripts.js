@@ -48,6 +48,7 @@ var titles = [
 
 ]
 
+//function to merge the names
 function writeName(){
 
 	var i = 0,
@@ -71,6 +72,8 @@ function writeName(){
 
 }
 
+//function to fade the texts
+
 function fadeInText(){
   var i = 0;
   if (i < 150){
@@ -83,6 +86,7 @@ function fadeInText(){
 
 }
 
+//function to scrll the text using set interval
 function scrollText(){
    var interval = setInterval(function(){
      							   $('.employee').css('bottom', '+=1px');
@@ -108,6 +112,7 @@ scrollText();
 //     });
 //
 // });
+// this to direct the page to the index after the credits are done
 window.setTimeout(function() {
     window.location.href = 'index.html';
 }, 70000);
