@@ -60,4 +60,4 @@ Grand Theft Auto is one of the most famous games in the world and in gaming hist
 
 ## Reflection/Evaluation:
 
-This should bookend the initial concept and talk about whether your expectations and goals were met in the process of building the final working version.
+Through this project we were able to learn a lot about the entire process of video production from start to finish and have learned to appreciate people's hard work in video more. We are proud of our final product and believe it reflects the theme of GTA and NYUAD well. If we were to have more time we would work on the video editing and website even more to add to the GTA environment.
