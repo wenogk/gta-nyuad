@@ -68,6 +68,7 @@ body{
 
 
 .pauseMenuContainer {
+  pointer-events: none;
   display: none;
   opacity:0;
   z-index: 4;
@@ -187,4 +188,9 @@ nav > .nav.nav-tabs{
 
 .missionContent {
   padding: 6px;
+}
+
+.clickAllow {
+  pointer-events: auto;
+  z-index: 100;
 }
