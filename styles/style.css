@@ -79,7 +79,14 @@ body{
   overflow-y: auto;
   top: 5px;
 }
+@media (max-width: 768px) {
+    body {
+      max-height: auto;
+      overflow: auto;
+    }
+  }
 @media (min-width: 801px) {
+
   .pauseMenuContainer {
     display: none;
     opacity:0;
