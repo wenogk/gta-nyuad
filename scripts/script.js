@@ -217,7 +217,13 @@ setTimeout(function(){
       closeFullscreen();
       document.location.href = "https://wenogk.github.io/gta-nyuad/credits.html";
 };
-
+let prevHeight = $(document).height();
+let prevWidth = $(document).width();
 $(window).resize(function(){
-  pauseVideo()
+  let curHeight = $(document).height();
+  let curWidth = $(document).width();
+  if((curWidth<prevWidth)||(curHeight<prevHeight)) {
+    pauseVideo()
+  }
+
 });
