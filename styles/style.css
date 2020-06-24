@@ -3,6 +3,7 @@
   src: url('../assets/fonts/ChaletLondonNineteenSixty.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
 }
 
+
 @media only screen and (orientation:portrait){
         #wrapper { display:none; }
         #warning-message { display:block; }
@@ -16,11 +17,22 @@
 }
 
 body{
-  cursor: url('Unavailable.cur'), auto;
+  /*cursor: url('Unavailable.cur'), auto;*/
   max-width: 100vw;
   max-height: 100vh;
   overflow: hidden;
 }
+
+.mfCursor {
+  cursor: url('cursor.cur'), auto;
+}
+.punchCursor {
+  cursor: url('Unavailable.cur'), auto;
+}
+.noCursor {
+  cursor: none;
+}
+
 .video-overlay {
   pointer-events: none;
   z-index: 3;
@@ -172,9 +184,6 @@ nav > .nav.nav-tabs{
   cursor:pointer;
 }
 
-.quit-button:hover {
-  cursor:pointer;
-}
 
 .transparentContent {
   background: rgb(0,0,0,0.7);

@@ -2,7 +2,9 @@ let fullscreenDebug = true;
 let pauseMenuMusic = document.getElementById("pause-menu-music");
 let missionContent = []
 let cheatHolder = []
+
 let lastCheatTypeTime = Math.floor(Date.now() / 1000);
+
 console.log(`░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███░░▒▓███`)
 console.log("Welcome Explorer! We at GTA NYU Abu Dhabi would like to give you a gift.")
 console.log("Anytime in the gameplay you can type any of the cheatcodes to unlock checkpoints!")
@@ -220,5 +222,30 @@ setTimeout(function(){
 $(window).resize(function(){
   if(!document.fullscreen) {
     pauseVideo(true)
+  }
+});
+
+var justHidden = false;
+var j;
+
+function hide() {
+  $('body').addClass("noCursor");
+  $('body').removeClass("mfCursor");
+  $('body').removeClass("punchCursor");
+  justHidden = true;
+  setTimeout(function() {
+    justHidden = false;
+  }, 500);
+}
+
+$(document).mousemove(function() {
+  if (!justHidden) {
+    justHidden = false;
+    console.log('move');
+    clearTimeout(j);
+    $('body').removeClass("noCursor");
+    $('body').removeClass("mfCursor");
+    $('body').addClass("punchCursor")
+    j = setTimeout(hide, 1000);
   }
 });
