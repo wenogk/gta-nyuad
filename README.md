@@ -1,32 +1,32 @@
 
-#**Project Name: Grand Theft Auto NYUAD**
+# Project Name: Grand Theft Auto NYUAD
 
-##**<span style="text-decoration:underline;">Project Description: </span>**
+## Project Description:
 
 Grand Theft Auto is one of the most famous games in the world and in gaming history, as it revolutionized the way we look at games. In this project we decided to mimic the game and make a real life Grand Theft Auto at NYU Abu Dhabi. In order to mimic NYUAD GTA and have a purpose for the story we decided to provide a storyline before jumping to NYUAD GTA. THis project presents a story of a boy at NYUAD that has been constantly bullied and humiliated by people around him. One day he wakes up and turns into a GTA character and that's where all of the fun begins. The project was designed and the idea was taken from the actual GTA game. We added as many details as we can to  resemble the story and make the video along the website look like the actual GTA game. Some of the details included were the character walk, music, hud, map, menu, sounds, and other missions were all taken from the actual game concept, even the design of the images. Overall we were striving to make the user/viewer experience NYUAD life in another lens.  
 
-##**<span style="text-decoration:underline;">Process: </span>**
+## Process:
 
-###**Ideation**
+### Ideation
 
 
 
 *   From the get go we knew we wanted to work on GTA NYU Abu Dhabi but quickly realized it would be a challenge to do justice to the game maintaining its style whilst incorporating NYUAD into it.
 
-###**Script writing**
+### Script writing
 
 
 
 *   We spent a lot of time brainstorming storylines for the main character and ended up going with the story of a bullied student who wants revenge and therefore becomes a GTA character.
 *   We wrote the entire script on a shared document with detailed scene information such as the angles, sounds and what movements should be made (GTA style walking for example)
 
-###**Video Production**
+### Video Production
 
 
 
 *   Before we shot the video we spent some time actually playing GTA to understand the game dynamic. We then filmed the shots required in our script on an iPhone in the span of 3 days. We took advantage of the, “fish-eye” view on the new iPhone which was very useful for the wide angle GTA shots. Many of the shots required 3 or more reshoots which was time consuming.
 
-###**Video Editing**
+### Video Editing
 
 
 
@@ -39,7 +39,7 @@ Grand Theft Auto is one of the most famous games in the world and in gaming hist
         *   We also manually added in the arrow at the middle of the map that changes its rotation value manually based on the characters orientation for the entire video.
 *   We added multiple GTA soundtracks in the video to create the atmosphere of a GTA game.
 
-###**Website Development**
+### Website Development
 
 
 
@@ -58,6 +58,6 @@ Grand Theft Auto is one of the most famous games in the world and in gaming hist
 *   Glitches:
     *   In the Glitches part we included some bloopers that we captured from the filming of the original video. We edited them on premiere pro and we attached them as a video on the webpage as an extra part.
 
-##**<span style="text-decoration:underline;">Reflection/Evaluation: </span>**
+## Reflection/Evaluation:
 
 This should bookend the initial concept and talk about whether your expectations and goals were met in the process of building the final working version.
